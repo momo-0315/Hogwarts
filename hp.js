@@ -24,10 +24,20 @@ window.addEventListener('scroll', ()=> { //スクロールするとヘッダー�
     header_bottom.style.background = "#10141b"
 });
 
-for (let i = 0; i < 4; i++) { //三角マークにカーソルを当てると回転する
+for (let i = 0; i < 4; i++) { //三角マークをクリックするとと回転する
     let svg_rotate = document.getElementById(`svg_rotate_${i}`);
 
     svg_rotate.addEventListener('click', () => {
         svg_rotate.classList.toggle("svg_rotate_after");
+    });
+};
+
+for (let i = 0; i < 10; i++) { //ヘッダー下部のリストにカーソルを当てると下線が引かれる
+    let header_bottom_list_box = document.getElementsByClassName('header_bottom_list_box')[i];
+    header_bottom_list_box.addEventListener('mousemove', () => {
+        header_bottom_list_box.classList.add('header_bottom_list_underline');
+    });
+    header_bottom_list_box.addEventListener('mouseleave', () => {
+        header_bottom_list_box.classList.remove('header_bottom_list_underline');
     });
 }

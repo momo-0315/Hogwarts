@@ -19,12 +19,12 @@ li {
 }
 
 /* 背景に黒フィルターを適用 */
-.bg_black_filter {
+ .bg_black_filter {
     background: black;
     background-size: cover;
     height: 1000px;
     opacity: 0.3;
-}
+} 
 
 /* ヘッダー上部の表示 */
 .header_top {
@@ -76,6 +76,12 @@ li {
     cursor: pointer;
     
 }
+/* 1025px以下の画面ではヘッダー下部リストを非表示 */
+@media screen and (max-width: 1025px) { 
+    .header_bottom_list_box{
+        display: none;
+    }
+}
 
 /* ヘッダー下部リストのtext設定 */
 .header_bottom_list_text {
@@ -90,6 +96,12 @@ li {
     color: #ffffff;
 }
 
+.header_bottom_list_underline {
+    
+    border-bottom: 1px solid rgb(190, 169, 255);
+    
+}
+
 /* svgの表示（回転させる） */
 .svg_rotate {
     transform: rotate( 90deg);
@@ -100,8 +112,32 @@ li {
     
 }
 
+/* クリック後にマークが回転 */
 .svg_rotate_after {
     transform: rotate( -90deg);
-    transition: transform .2s ease-in-out;
-    
+    transition: transform .2s ease-in-out;  
+}
+
+/* ホームロゴ全体 */
+.Home_logo_wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    position: relative;
+}
+
+/* ホームロゴ上のスペース */
+.Home_logo_space {
+    display: block;
+    margin-top: 130px;
+}
+
+
+.Home_HP_FB_logo {
+    margin: 20px 0 0;
+}
+/* ハリポタ、ファンタビのロゴ */
+.Home_HP_FB_logo img {
+    width: 536px;
+    height: 120px;
 }
