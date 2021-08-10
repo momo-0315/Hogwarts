@@ -8,8 +8,9 @@ li {
     display: list-item;
 }
 
-/* 背景画像を設定 */
-.bg_picture {
+/* 一枚目の背景画像を設定 */
+
+.bg_picture1 {
     background-image: url(http://images.ctfassets.net/usf1vwtuqyxm/2BjlJKFYpC0ogkUNHANDFZ/d615d597f9d8d401e6d3838f0410e5d3/HPRM-final-banner-no-text.jpg?q=70);
     background-size: cover;
     background-repeat: no-repeat;
@@ -18,15 +19,18 @@ li {
     width: 100%;
 }
 
-/* 背景に黒フィルターを適用 */
- .bg_black_filter {
-    background: black;
+/* 一枚目の背景に黒フィルターを適用 */
+
+.bg_black_filter1 {
+    background: linear-gradient(#c1baba, black);
     background-size: cover;
     height: 1000px;
-    opacity: 0.3;
-} 
+    width: 100%;
+    opacity: 0.6;
+}
 
 /* ヘッダー上部の表示 */
+
 .header_top {
     background-color: none;
     display: flex;
@@ -40,13 +44,14 @@ li {
     transition: background-color .3s ease-in;
 }
 
-@media screen and (max-width: 1025px) { 
-    .header_top{
+@media screen and (max-width: 1025px) {
+    .header_top {
         display: none;
     }
 }
 
 /* ヘッダー下部の表示 */
+
 .header_bottom {
     background-color: none;
     position: fixed;
@@ -57,14 +62,14 @@ li {
     transition: background-color .3s ease-in;
 }
 
-@media screen and (max-width: 1025px) { 
-    .header_bottom{
+@media screen and (max-width: 1025px) {
+    .header_bottom {
         display: none;
     }
 }
 
-
 /* ヘッダー下部リスト表示、境界線表示 */
+
 .header_bottom_lists {
     display: flex;
     border-top: 1px solid hsla(0, 0%, 100%, .15);
@@ -77,6 +82,7 @@ li {
 }
 
 /* ヘッダー下部リストをの余白を設定、textとsvgを含むdivタグ */
+
 .header_bottom_list_box {
     display: flex;
     flex-direction: row;
@@ -87,51 +93,54 @@ li {
     border-bottom: 1px solid transparent;
     position: relative;
     cursor: pointer;
-    
 }
+
 /* 1025px以下の画面ではヘッダー下部リストを非表示 */
-@media screen and (max-width: 1025px) { 
-    .header_bottom_list_box{
+
+@media screen and (max-width: 1025px) {
+    .header_bottom_list_box {
         display: none;
     }
 }
 
 /* ヘッダー下部リストのtext設定 */
+
 .header_bottom_list_text {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: flex-start;
-    font-family: Sofia Pro, bold;
+    font-family: Arial, Helvetica, sans-serif;
     text-transform: uppercase;
-    font-size: 12px;
+    font-size: 14px;
     font-weight: 700;
     color: #ffffff;
 }
 
+/* カーソルが乗ると紫の下線 */
 .header_bottom_list_underline {
-    
     border-bottom: 1px solid rgb(190, 169, 255);
-    
 }
 
 /* svgの表示（回転させる） */
+
 .svg_rotate {
     transform: rotate( 90deg);
     display: inline-block;
     margin-left: 10px;
     position: relative;
     top: 2px;
-    
 }
 
 /* クリック後にマークが回転 */
+
 .svg_rotate_after {
     transform: rotate( -90deg);
-    transition: transform .2s ease-in-out;  
+    transition: transform .2s ease-in-out;
 }
 
 /* ホームロゴ全体 */
+
 .Home_logo_wrapper {
     display: flex;
     align-items: center;
@@ -140,26 +149,29 @@ li {
 }
 
 /* ホームロゴ上のスペース */
+
 .Home_logo_space {
     display: block;
     margin-top: 130px;
 }
 
-
 .Home_HP_FB_logo {
     margin: 20px 0 0;
 }
+
 /* ハリポタ、ファンタビのロゴ */
+
 .Home_HP_FB_logo img {
     width: 536px;
     height: 120px;
 }
 
+/* challenge yourselfのロゴ */
 .Home_logo_challenge_yourself {
-    font-family: Bluu Next,serif;
-    font-size: 3.33333em;
+    font-family: Bluu Next, serif;
+    font-size: 55px;
     font-weight: 700;
-    line-height: 1.3;
+    line-height: 1.4;
     text-align: center;
     max-width: 760px;
     padding: 0 30px;
@@ -167,13 +179,167 @@ li {
     color: #f9f4f2;
 }
 
+/* 1025px以下では小さく表示 */
+@media screen and (max-width: 1025px) {
+    .Home_logo_challenge_yourself {
+        font-size: 40px;
+    }
+}
+
+/* challenge yourselfの下の文章 */
 .Home_logo_challenge_yourself_text {
-    font-family: Sofia Pro,bold;
+    font-family: Sofia Pro, bold;
     font-size: 16px;
     line-height: 1.38;
     color: #f9f4f2;
     text-align: center;
     max-width: 520px;
     padding: 0 30px;
-    margin-left: 120px;
+    margin-left: 140px;
+}
+
+/* 1025px以下では非表示 */
+@media screen and (max-width: 1025px) {
+    .Home_logo_challenge_yourself_text {
+        display: none;
+    }
+}
+
+/* play them all ボタン */
+button {
+    align-items: flex-start;
+    cursor: default;
+    font: 400 13.3333px Arial;
+}
+
+/* play them all ボタン中身 */
+.Home_logo_button {
+    width: 320px;
+    color: #ffffff;
+    background-color: #4d3ecc;
+    font-size: 14px;
+    font-weight: 700;
+    text-align: center;
+    text-transform: uppercase;
+    line-height: 1;
+    border-radius: 30px;
+    padding: 18px 31px;
+    margin-top: 30px;
+    margin-left: 250px;
+    border: 1px solid transparent;
+}
+
+/* 二枚目の背景 */
+.bg_picture2 {
+    background: linear-gradient(#656564, #12151C);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    height: 1000px;
+    width: 100%;
+}
+
+/* フッターの背景 */
+.footer {
+    text-align: center;
+    line-height: 1;
+    font-size: 10px;
+    position: relative;
+    background-color: #10141b;
+    font-family: Sofia Pro, serif;
+    font-weight: 400;
+    width: inherit;
+    height: 500px;
+    padding: 100px;
+}
+
+/* フッターの枠線 */
+.footer_inner_border {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border: 1px solid #696b78;
+    padding: 40px 2px 0 25px;
+    width: 100%;
+}
+
+/* フッター枠線内の中身 */
+.footer_inner_block {
+    max-width: 1240px;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* フッター枠線内の項目の位置 */
+.footer_inner_text {
+    height: 105px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* フッター枠線内の項目の並べ方 */
+.footer_inner_lists {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    list-style: none;
+    height: 105px;
+    width: 80%;
+    align-items: flex-start;
+}
+
+/* フッター枠線内の項目 */
+.footer_inner_list {
+    display: flex;
+    margin-bottom: 15px;
+    cursor: pointer;
+}
+
+/* フッター枠線内の項目のテキスト */
+.footer_inner_list a {
+    color: #ffffff;
+    line-height: 20px;
+    font-size: 14px;
+    text-align: left;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 700;
+}
+
+/* フッター枠線内の線 */
+.footer_line {
+    border: 2px;
+    height: 1px;
+    width: 100%;
+    background-color: #353643;
+}
+
+/* フッター枠線内の下部 */
+.footer_low_container {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+    padding-top: 0;
+    margin-top: 20px;
+}
+
+/* フッター枠線内の下部のテキスト群 */
+.footer_low_texts {
+    text-align: left;
+    line-height: 1.33;
+    font-family: Sofia Pro, bold;
+    color: #9fa1ad;
+}
+
+/* フッター枠線内の下部のテキスト */
+.footer_low_texts p {
+    font-size: 14px;
+    line-height: 20px;
+    max-width: 702px;
+    width: 100%;
+    margin: 16px 0;
+    font-weight: 400;
+    font-stretch: normal;
+    letter-spacing: .25px;
 }
