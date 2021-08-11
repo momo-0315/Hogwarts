@@ -19,6 +19,15 @@ li {
     width: 100%;
 }
 
+/* .bg_picture1:not(.Home_HP_FB_logo) {
+    animation: fadeIn 5s ease 0s 1 normal;
+}
+
+@keyframes fadeIn {
+    0% {opacity: 0}
+    100% {opacity: 1}
+} */
+
 /* 一枚目の背景に黒フィルターを適用 */
 
 .bg_black_filter1 {
@@ -48,6 +57,40 @@ li {
     .header_top {
         display: none;
     }
+}
+
+.wizarding_world_logo {
+    display: block;
+    height: 40px;
+    width: 70px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.header_top_right_button {right: 0;
+    position: absolute;
+    margin-right: 100px;
+}
+
+.login_button {
+    padding: 0;
+    border: none;
+}
+
+.login_button_text{
+    cursor: pointer;
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 12px;
+    font-weight: 400;
+    font-style: normal;
+    font-stretch: normal;
+    line-height: normal;
+    letter-spacing: normal;
+    background: #6C63B5;
+    color: #f9f4f2;
+    border-radius: 3px;
+    padding: 8px 20px 5px;
+    transition: .3s ease-in-out;
 }
 
 /* ヘッダー下部の表示 */
@@ -227,6 +270,12 @@ button {
     margin-top: 30px;
     margin-left: 250px;
     border: 1px solid transparent;
+}
+
+@media screen and (max-width: 1025px) {
+    .Home_logo_button {
+        margin-left: 200px;
+    }
 }
 
 /* 二枚目の背景 */

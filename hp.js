@@ -1,6 +1,8 @@
 const header_top = document.getElementById('header_top');//ヘッダー上部のid取得
 const header_bottom = document.getElementById('header_bottom');//ヘッダー下部のid取得
-const header = document.getElementsByClassName('header')[0];
+const header = document.getElementsByClassName('header')[0];//ヘッダー全体をクラス名より取得
+const login_button = document.getElementsByClassName('login_button_text')[0];
+
 
 header.addEventListener('mousemove', () => { //ヘッダーにカーソルが乗るとヘッダーを表示
     header_top.style.background = "#242633";
@@ -35,3 +37,10 @@ for (let i = 0; i < 9; i++) { //ヘッダー下部のリストにカーソルを
         header_bottom_list_box.classList.remove('header_bottom_list_underline');
     });
 }
+
+login_button.addEventListener('mousemove',()=>{
+    login_button.style.background = "#3e3497";
+});
+login_button.addEventListener('mouseleave',()=>{
+    login_button.style.background = "#6C63B5";
+});
