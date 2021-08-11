@@ -19,14 +19,15 @@ li {
     width: 100%;
 }
 
-/* .bg_picture1:not(.Home_HP_FB_logo) {
+/* じわっと表示 */
+.bg_picture1:not(.Home_HP_FB_logo) {
     animation: fadeIn 5s ease 0s 1 normal;
 }
 
 @keyframes fadeIn {
     0% {opacity: 0}
     100% {opacity: 1}
-} */
+}
 
 /* 一枚目の背景に黒フィルターを適用 */
 
@@ -54,7 +55,7 @@ li {
 }
 
 @media screen and (max-width: 1025px) {
-    .header_top {
+    .header_top:not(.header_top_right_button) {
         display: none;
     }
 }
@@ -67,7 +68,8 @@ li {
     margin-right: auto;
 }
 
-.header_top_right_button {right: 0;
+.header_top_right_button {
+    right: 0;
     position: absolute;
     margin-right: 100px;
 }
@@ -288,6 +290,20 @@ button {
     width: 100%;
 }
 
+.pictures_place {
+    display: inline-block;
+    
+}
+
+.three_pictures {
+padding-left: 100px;
+}
+
+.three_pictures img {
+    width: 360px;
+    height: 200px;
+    padding: 30px;
+}
 /* フッターの背景 */
 .footer {
     text-align: center;

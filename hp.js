@@ -1,7 +1,8 @@
 const header_top = document.getElementById('header_top');//ヘッダー上部のid取得
 const header_bottom = document.getElementById('header_bottom');//ヘッダー下部のid取得
 const header = document.getElementsByClassName('header')[0];//ヘッダー全体をクラス名より取得
-const login_button = document.getElementsByClassName('login_button_text')[0];
+const login_button = document.getElementsByClassName('login_button_text')[0];//ログインボタンを取得
+const Play_them_all_button = document.getElementsByClassName('Home_logo_button')[0];//Play them allボタンを取得
 
 
 header.addEventListener('mousemove', () => { //ヘッダーにカーソルが乗るとヘッダーを表示
@@ -38,9 +39,16 @@ for (let i = 0; i < 9; i++) { //ヘッダー下部のリストにカーソルを
     });
 }
 
-login_button.addEventListener('mousemove',()=>{
+login_button.addEventListener('mousemove',()=>{ //ログインボタンにカーソル当てると色が濃くなる
     login_button.style.background = "#3e3497";
 });
 login_button.addEventListener('mouseleave',()=>{
     login_button.style.background = "#6C63B5";
+});
+
+Play_them_all_button.addEventListener('mousemove',()=>{ //play them all ボタンにカーソルを当てると色が濃くなる
+    Play_them_all_button.style.background = "#3e3497";
+});
+Play_them_all_button.addEventListener('mouseleave',()=>{
+    Play_them_all_button.style.background = "#6C63B5";
 });
