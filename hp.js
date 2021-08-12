@@ -4,7 +4,6 @@ const header = document.getElementsByClassName('header')[0];//ヘッダー全体
 const login_button = document.getElementsByClassName('login_button_text')[0];//ログインボタンを取得
 const Play_them_all_button = document.getElementsByClassName('Home_logo_button')[0];//Play them allボタンを取得
 
-
 header.addEventListener('mousemove', () => { //ヘッダーにカーソルが乗るとヘッダーを表示
     header_top.style.background = "#242633";
     header_bottom.style.background = "#10141b";
@@ -52,3 +51,20 @@ Play_them_all_button.addEventListener('mousemove',()=>{ //play them all ボタ�
 Play_them_all_button.addEventListener('mouseleave',()=>{
     Play_them_all_button.style.background = "#6C63B5";
 });
+
+
+// ページトップならヘッダーを非表示にする
+
+// var whole_wrapper = document.getElementsByClassName('whole_wrapper')[0];
+// var clientRect = whole_wrapper.getBoundingClientRect() ;
+// console.log(clientRect);
+// if (clientRect == 0) {
+//     header_top.style.background = "none";
+//     header_bottom.style.background = "none";
+// } if(clientRect != 0) {
+//     header_top.style.background = "#242633";
+//     header_bottom.style.background = "#10141b";
+// };
+
+var height = window.pageYOffset;
+console.log(height);
