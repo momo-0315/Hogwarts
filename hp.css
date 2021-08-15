@@ -311,17 +311,18 @@ button {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 1000px;
+    height: 2000px;
     width: 100%;
 }
 
 /* 三枚の写真の位置、大きさ調整 */
-.pictures_place {
+.pictures_li {
     position: relative;
 }
 
 .three_pictures {
     padding-left: 100px;
+   
 }
 
 .three_pictures img {
@@ -353,6 +354,40 @@ button {
     line-height: 1.31;
     color: #fff;
     font-family: Bluu Next, serif;
+}
+
+.pictures_ul {
+     display: flex;
+}
+
+li  {
+    list-style: none;
+    
+}
+.slider_list {
+    flex-direction: row;
+    transform: translateX();
+}
+
+.next_prev_buttons {
+    margin: 200px;
+}
+
+.slider_dots {
+  display: flex; 
+  flex-direction: row; 
+  bottom: 0;
+  left: 185px;
+  height: 42px;
+  width: 85%;
+}
+
+.slider_dots li div {
+    width: 6px;
+    height: 6px;
+    border-radius: 50%;
+    background-color: #353643;
+    margin-right: 10px;  
 }
 
 /* フッターの背景 */

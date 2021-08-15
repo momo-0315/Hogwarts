@@ -66,5 +66,73 @@ Play_them_all_button.addEventListener('mouseleave',()=>{
 //     header_bottom.style.background = "#10141b";
 // };
 
-var height = window.pageYOffset;
-console.log(height);
+// var height = window.pageYOffset;
+// console.log(height);
+
+
+const next = document.getElementById('next_button');
+const prev = document.getElementById('prev_button');
+
+const slider_width =document.getElementsByClassName('pictures_li')[0];
+let width = slider_width.clientWidth;
+
+const slider_list = document.getElementsByClassName('pictures_ul')[0];
+const slider_list_item = document.querySelectorAll('pictures_li');
+
+let counter = 0;
+
+next.addEventListener('click', ()=> {
+    counter++;
+    slider_list.style.transition = ".3s";
+    slider_list.style.transform = `translateX(${+(-width*counter)}px)`;
+    
+});
+
+prev.addEventListener('click', ()=> {
+    counter--;
+    slider_list.style.transition = ".3s";
+    slider_list.style.transform = `translateX(${+(-width*counter)}px)`;
+    
+});
+
+next.addEventListener("click", function(){
+    if(counter == 8) {
+        slider_list.style.transform = `translateX(-100px)`   };
+    //以下省略
+ });
+ 
+ prev.addEventListener("click", function(){
+    if(counter == 1) return;
+    //以下省略
+ });
+
+// let pictures = ["https://images.ctfassets.net/usf1vwtuqyxm/4IUJ6Pc1snjIUg12xnJeeP/ca4564e9630fa380a7e91b299923a514/puzzles-and-spell-club-challenge-header-harry-ron-hermione-web-landscape?w=764&h=426&fit=fill&f=top&fm=webp",
+//     "https://images.ctfassets.net/usf1vwtuqyxm/4XMo7sppXCUhYAdx3yeQad/c7e210eed23fa06affa915adf4963334/HP-F8-deathly-hallows-part-two-bill-fleur-shell-cottage-doorway-web-landscape?w=764&h=426&fit=fill&f=top&fm=webp",
+//     "https://images.ctfassets.net/usf1vwtuqyxm/3kRVHtUmHKP5DunbbkuUEL/cb03ae8c0845cfe3d743e1738112f0f4/cursed-child-poster-crop?w=764&h=426&fit=fill&f=top&fm=webp",
+//     "https://images.ctfassets.net/usf1vwtuqyxm/33ngPxAZr7O17MyBnrImEL/f0731fe6c3da6b3fcfad6aa3abe638fa/HP-F2-chamber-of-secrets-professor-sprout-teaching-herbology-greenhouse-web-landscape.jpg?w=764&h=426&fit=fill&f=top&fm=webp",
+//     "https://images.ctfassets.net/usf1vwtuqyxm/6oeX7ycYTZMZYHwhshvsxd/a23995a65174aaa38aa280f5ab768b97/HP-F4-goblet-of-fire-neville-dancing-boys-dormitory-web-landscape?w=764&h=426&fit=fill&f=top&fm=webp"];
+
+// let short_texts = ["News","FEATURE","FEATURE","Quiz",];
+
+// let long_texts = [];
+
+// for(let i = 0; i<; i++) {
+// let pictures_slider =
+// `
+        
+//            <li class="pictures_li">
+//             <div class="news_">
+//                 <div class="">
+//                     <a href="https://www.wizardingworld.com/news/puzzles-and-spells-launches-club-challenge-event">
+
+//                         <img src="https://images.ctfassets.net/usf1vwtuqyxm/4IUJ6Pc1snjIUg12xnJeeP/ca4564e9630fa380a7e91b299923a514/puzzles-and-spell-club-challenge-header-harry-ron-hermione-web-landscape?w=764&h=426&fit=fill&f=top&fm=webp"
+//                             alt="news" class="news_picture pictures_td">
+//                             <span class="picture_short_text">NEWS</span>
+//                             <span class="picture_long_text">Harry Potter: <br> Puzzles & Spells launches its new Club Challenge events</span>
+//                     </a>
+//                 </div>
+//             </div>
+//         </li>
+//     `
+// document.getElementById('slide_show').insertAdjacentHTML("beforeend", pictures_slider);
+// };
