@@ -315,7 +315,7 @@ button {
     width: 100%;
 }
 
-/* 三枚の写真の位置、大きさ調整 */
+/* 写真の位置、大きさ調整 */
 .pictures_li {
     position: relative;
 }
@@ -356,38 +356,48 @@ button {
     font-family: Bluu Next, serif;
 }
 
+
 .pictures_ul {
      display: flex;
+     flex-direction: row;
 }
+
 
 li  {
     list-style: none;
     
 }
-.slider_list {
-    flex-direction: row;
-    transform: translateX();
-}
 
+/* 写真のボタン */
 .next_prev_buttons {
-    margin: 200px;
+    margin-top: 50px;
+    margin-left: 200px;
 }
 
+/* 今の写真の位置の点々 */
 .slider_dots {
   display: flex; 
   flex-direction: row; 
-  bottom: 0;
-  left: 185px;
+  margin-left: 300px;
   height: 42px;
   width: 85%;
 }
 
+/* 今の写真の位置 */
 .slider_dots li div {
     width: 6px;
     height: 6px;
     border-radius: 50%;
     background-color: #353643;
     margin-right: 10px;  
+}
+
+/* 三枚の写真以外見えなくする */
+.three_pictures_position {
+    width: 1250px;
+    height: 400px;
+    padding: 0;
+    overflow: hidden;
 }
 
 /* フッターの背景 */
