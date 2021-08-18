@@ -52,7 +52,6 @@ Play_them_all_button.addEventListener('mouseleave',()=>{
     Play_them_all_button.style.background = "#6C63B5";
 });
 
-
 // ページトップならヘッダーを非表示にする
 
 // var whole_wrapper = document.getElementsByClassName('whole_wrapper')[0];
@@ -68,7 +67,6 @@ Play_them_all_button.addEventListener('mouseleave',()=>{
 
 // var height = window.pageYOffset;
 // console.log(height);
-
 
 const next = document.getElementById('next_button');//右のボタンのid取得
 const prev = document.getElementById('prev_button');//左のボタンのid取得
@@ -87,8 +85,6 @@ next.addEventListener('click', ()=> { //nextボタンをクリックしたら3�
     slider_list.style.transform = `translateX(${+(-width*counter)}px)`;
     document.getElementById(`slider_dots_${counter}`).style.background = "#ffffff";
     document.getElementById(`slider_dots_${counter - 1}`).style.background = "#353643";
-
-    
 });
 
 prev.addEventListener('click', ()=> { //prevボタンをクリックしたら3秒かけて、X座標方向に-liの長さ×カウンター(減っていく)の分進む
@@ -98,7 +94,7 @@ prev.addEventListener('click', ()=> { //prevボタンをクリックしたら3�
 });
 
 next.addEventListener("click", function(){ //一番最後の写真になったら最初の写真にもどる、ゆくゆくcounterの数で取得
-    if(counter == 9) {slider_list.style.transform = `translateX(100px)`;};
+    if(counter == 8) {slider_list.style.transform = `translateX(100px)`;};
     //以下省略
  });
  
@@ -106,6 +102,7 @@ next.addEventListener("click", function(){ //一番最後の写真になった�
     if(counter == 1) return;
     //以下省略
  });
+
 
 
 
