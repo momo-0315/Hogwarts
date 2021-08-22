@@ -32,7 +32,7 @@ li {
 
 /* 一枚目の背景に黒フィルターを適用 */
 
-.bg_black_filter1 {
+.bg_black_filter1:not(.Home_logo_button) {
     background: linear-gradient(#c1baba, black);
     background-size: cover;
     height: 1000px;
@@ -309,7 +309,7 @@ button {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 2000px;
+    height: 3100px;
     width: 100%;
 }
 
@@ -401,14 +401,24 @@ li {
     overflow: hidden;
 }
 
-.wand_ceremony_wrapper {
+/* 以下の三つのコンテンツに共通するdivの全体情報 */
+
+.common_information_wrapper {
     display: flex;
     flex-direction: row;
     text-align: center;
     margin-top: 100px;
 }
 
-.wand_ceremony_picture {
+/* 二つ目だけのラッパー */
+
+.Patronus_wrapper {
+    margin-top: 150px;
+}
+
+/* 三つのコンテンツに共通する写真の情報 */
+
+.common_information_picture {
     position: relative;
     display: block;
     width: 100%;
@@ -416,23 +426,58 @@ li {
     text-align: right;
 }
 
-.wand_ceremony_picture img {
-    
+/* 二枚目の写真の情報 */
+
+.Patronus_picture {
+    text-align: left;
+}
+
+/* 三枚目の写真の情報 */
+
+.Hedwig_picture {
+    text-align: right;
+}
+
+/* 三つのコンテンツに共通する写真の大きさ */
+
+.common_information_picture img {
     width: 1008px;
     height: 420px;
 }
 
-.wand_ceremony_picture_filter {
+/* 二枚目の写真の大きさ */
+
+.Patronus_picture img {
+    width: 905px;
+    height: 100%;
+}
+
+/* 三枚目の写真の大きさ */
+
+.Hedwig_picture img {
+    height: 567px;
+}
+
+/* 三つのコンテンツに共通する写真のフィルター情報 */
+
+.common_information_picture_filter {
     position: absolute;
     width: 33%;
     height: 100%;
     left: 430px;
     bottom: 0;
     background-image: linear-gradient( 90deg, rgba(16, 20, 27, .8), rgba(16, 20, 27, 0) 98%);
-    
 }
 
-.wand_ceremony_text_container {
+/* 二枚目の写真のフィルター */
+
+.Patronus_picture_filter {
+    left: 0;
+}
+
+/* 三つのコンテンツに共通する文章の囲い */
+
+.common_information_text_container {
     position: absolute;
     padding-left: -10%;
     order: 1;
@@ -440,32 +485,57 @@ li {
     align-self: center;
 }
 
-.wand_ceremony_short_text {
+.Patronus_text_container {
+    margin-left: 750px;
+    padding-left: 0;
+}
+
+.common_information_short_text {
     color: #ffffff;
     font-size: 60px;
     line-height: 65px;
     margin-top: 20px;
     text-align: right;
-    font-family:Bluu Next, serif;
+    font-family: Bluu Next, serif;
     font-weight: 700;
 }
 
-.wand_ceremony_long_text {
+.Patronus_short_text {
+    text-align: left;
+}
+
+.common_information_long_text {
     color: #ffffff;
     font-size: .88889em;
     line-height: 24px;
     text-align: right;
     margin-top: 1.11111em;
     font-family: Arial, Helvetica, sans-serif
-
 }
 
-.wand_ceremony_button_wrapper {
+.Patronus_long_text {
+    text-align: left;
+}
+
+.Patronus_tiny_text {
+    color: #ffffff;
+    text-align: left;
+    font-size: 16px;
+    line-height: 18px;
+    font-family: Mason Sans OT, bold;
+    font-weight: 700;
+}
+
+.common_information_button_wrapper {
     margin-top: 20px;
     text-align: right;
 }
 
-.wand_ceremony_button {
+.Patronus_button_wrapper {
+    text-align: left;
+}
+
+.common_information_button {
     color: #fff;
     background-color: #6b63b5;
     font-weight: 700;
@@ -479,11 +549,67 @@ li {
     padding: 20px 50px;
 }
 
-.wand_ceremony_button_text {
+.common_information_button_text {
     position: relative;
     bottom: -2px;
 }
 
+.latest_news_wrapper {
+    margin-top: 100px;
+}
+
+.latest_news_short_text {
+    font-family: Bluu Next,serif;
+    font-size: 48px;
+    font-weight: 700;
+    line-height: 1.35;
+    color: #fff;
+    margin-left: 225px;
+    margin-bottom: 50px;
+}
+
+/* 三つの写真を横並び */
+.latest_news_container {
+    display: flex;
+    flex-direction: row;
+    margin-left: 150px;
+}
+
+/* 画像の上に文字を置きたい */
+.latest_news_pictures {
+    position: relative;
+}
+
+/* 三つの写真のスタイル */
+.latest_news_pictures img {
+    width: 360px;
+    height: 200px;
+    margin-right: 50px;
+}
+
+.latest_news_long_text_container {
+    margin-top: 10px;
+    width: 340px;
+    height: 320px;
+    display: flex;
+    -moz-box-pack: center;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid #696b78;
+    position: absolute;
+    top: 0px;
+    left: 8px;
+}
+
+.latest_news_long_text {
+    font-size: 20px;
+    line-height: 30px;
+    width: 80%;
+    object-fit: contain;
+    font-family: Sofia Pro,bold;
+    font-weight: 400;
+    color: #ffffff;
+}
 /* フッターの背景 */
 
 .footer {
@@ -506,7 +632,7 @@ li {
     flex-direction: column;
     justify-content: space-between;
     border: 1px solid #696b78;
-    padding: 40px 2px 0 25px;
+    padding: 50px 0px 50px 60px;
     width: 100%;
 }
 
