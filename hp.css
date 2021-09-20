@@ -4,9 +4,9 @@ body {
     line-height: 24px;
 }
 
-li {
+/* li {
     display: list-item;
-}
+} */
 
 /* 一枚目の背景画像を設定 */
 
@@ -17,27 +17,56 @@ li {
     background-position: center;
     height: auto;
     width: 100%;
+    z-index: 9997;
+}
+
+.header_bottom_list_svg_clicked_top {
+    display: fixed;
+    background: #10141b;
+    position: relative;
+    list-style: none;
+    padding: 7px 0 2px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 260px;
+    z-index: 9998;
+    /* transform: translateY(200px); */
+
+}
+
+.header_bottom_list_svg_clicked_bottom {
+    display: fixed;
+    background: #10141b;
+    opacity: 0.8;
+    position: relative;
+    list-style: none;
+    padding: 7px 0 2px;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 260px;
+    z-index: 9998;
 }
 
 /* じわっと表示 */
 
-/* .bg_picture1:not(.Home_HP_FB_logo) {
+.bg_picture1:not(.Home_HP_FB_logo) {
     animation: fadeIn 5s ease 0s 1 normal;
 }
 
 @keyframes fadeIn {
     0% {opacity: 0}
     100% {opacity: 1}
-} */
+}
 
 /* 一枚目の背景に黒フィルターを適用 */
 
 .bg_black_filter1:not(.Home_logo_button) {
-    background: linear-gradient(#c1baba, black);
+    background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.6));
     background-size: cover;
     height: 1000px;
     width: 100%;
-    opacity: 0.6;
 }
 
 /* ヘッダー上部の表示 */
@@ -53,6 +82,7 @@ li {
     padding: 12px 0 10px;
     z-index: 9997;
     transition: background-color .3s ease-in;
+    z-index: 9999;
 }
 
 @media screen and (max-width: 1025px) {
@@ -108,7 +138,10 @@ li {
     cursor: pointer;
 }
 
-.HamburgerMenu {}
+.HamburgerMenu {
+    
+}
+
 
 /* ヘッダー下部の表示 */
 
@@ -120,6 +153,7 @@ li {
     width: 100%;
     z-index: 9997;
     transition: background-color .3s ease-in;
+    z-index: 9999;
 }
 
 @media screen and (max-width: 1025px) {
@@ -283,7 +317,7 @@ button {
 .Home_logo_button {
     width: 320px;
     color: #ffffff;
-    background-color: #4d3ecc;
+    background-color: #6C63B5;
     font-size: 14px;
     font-weight: 700;
     text-align: center;
@@ -309,8 +343,12 @@ button {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-    height: 3100px;
+    height: 400px;
     width: 100%;
+}
+
+.bg_picture3 {
+    background: linear-gradient(#12151C, #000000);
 }
 
 /* 写真の位置、大きさ調整 */
@@ -368,8 +406,25 @@ li {
 /* 写真のボタン */
 
 .next_prev_buttons {
-    margin-top: 50px;
+    padding-top: 70px;
     margin-left: 200px;
+    display: flex;
+}
+
+.slider_button {
+    cursor: pointer;
+    width: 42px;
+    height: 42px;
+    border: 1px solid #d2d2d2;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 20px;
+}
+
+.next_prev_buttons_slider_dots {
+    display: flex;
 }
 
 /* 今の写真の位置の点々 */
@@ -377,9 +432,10 @@ li {
 .slider_dots {
     display: flex;
     flex-direction: row;
-    margin-left: 300px;
     height: 42px;
     width: 85%;
+    margin-top: 90px;
+    margin-left: 50px;
 }
 
 /* 今の写真の位置 */
@@ -606,10 +662,40 @@ li {
     line-height: 30px;
     width: 80%;
     object-fit: contain;
-    font-family: Sofia Pro,bold;
-    font-weight: 400;
+    font-family: Arial, Helvetica, sans-serif;
+    font-weight: 600;
     color: #ffffff;
 }
+
+.latest_news_after_border {
+    border: 2px;
+    height: 1px;
+    width: 800px;
+    background-color: #353643;
+    color: #353643;
+    margin-top: 180px;
+    margin-left: 300px;
+}
+
+.latest_news_after_text {
+    color: #f9f4f2;
+    font-size: 12px;
+    font-weight: 600;
+    margin-left: 30px;
+}
+
+.latest_news_after_wrapper {
+   display: flex;
+   flex-direction: row;
+   align-items: flex-end;
+}
+
+.view_all_news_underline {
+  text-decoration: underline;
+  color: #f9f4f2;
+    
+}
+
 /* フッターの背景 */
 
 .footer {
@@ -617,7 +703,7 @@ li {
     line-height: 1;
     font-size: 10px;
     position: relative;
-    background-color: #10141b;
+    background-color: #000000;
     font-family: Sofia Pro, serif;
     font-weight: 400;
     width: inherit;

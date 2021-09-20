@@ -14,18 +14,18 @@ header.addEventListener('mouseleave', () => { //ヘッダーからカーソル�
     header_bottom.style.background = "none";
 });
 
-
 window.addEventListener('scroll', ()=> { //スクロールするとヘッダーを表示
     header_top.style.background ="#242633";
     header_bottom.style.background = "#10141b"
 });
 
-for (let i = 0; i < 4; i++) { //三角マークをクリックするとと回転する
+for (let i = 0; i < 4; i++) { //ヘッダー下部の三角マークをクリックするとと回転する
     let svg_rotate = document.getElementById(`svg_rotate_${i}`);
 
     svg_rotate.addEventListener('click', () => {
         svg_rotate.classList.toggle("svg_rotate_after");
     });
+    
 };
 
 for (let i = 0; i < 9; i++) { //ヘッダー下部のリストにカーソルを当てると下線が引かれる
@@ -66,7 +66,7 @@ Play_them_all_button.addEventListener('mouseleave',()=>{
 // };
 
 // var height = window.pageYOffset;
-// console.log(height);
+// console.log(height); 座標取得まではできるのにリロードしないと変わらないリアルタイムで変わらない
 
 const next = document.getElementById('next_button');//右のボタンのid取得
 const prev = document.getElementById('prev_button');//左のボタンのid取得
@@ -101,7 +101,17 @@ next.addEventListener("click", function(){ //一番最後の写真になった�
  prev.addEventListener("click", function(){
     if(counter == 1) return;
     //以下省略
+    
  });
+
+const view_all_news = document.getElementById("view_all_news");
+view_all_news.addEventListener('mousemove', ()=> {
+    view_all_news.classList.add('view_all_news_underline');
+})
+view_all_news.addEventListener('mouseleave', ()=> {
+    view_all_news.classList.remove('view_all_news_underline');
+});
+
 
 
 
