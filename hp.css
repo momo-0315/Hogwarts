@@ -32,7 +32,6 @@ body {
     height: 260px;
     z-index: 9998;
     /* transform: translateY(200px); */
-
 }
 
 .header_bottom_list_svg_clicked_bottom {
@@ -51,19 +50,23 @@ body {
 
 /* じわっと表示 */
 
-.bg_picture1:not(.Home_HP_FB_logo) {
-    animation: fadeIn 5s ease 0s 1 normal;
+.bg_picture1 {
+    /* animation: fadeIn 5s ease 0s 1 normal; */
 }
 
 @keyframes fadeIn {
-    0% {opacity: 0}
-    100% {opacity: 1}
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1
+    }
 }
 
 /* 一枚目の背景に黒フィルターを適用 */
 
 .bg_black_filter1:not(.Home_logo_button) {
-    background: linear-gradient(rgba(0, 0, 0, 0.2),rgba(0, 0, 0, 0.6));
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.6));
     background-size: cover;
     height: 1000px;
     width: 100%;
@@ -86,7 +89,7 @@ body {
 }
 
 @media screen and (max-width: 1025px) {
-    .header_top:not(.header_top_right_button) {
+    .header_top {
         display: none;
     }
 }
@@ -101,8 +104,16 @@ body {
 
 .header_top_right_button {
     right: 0;
-    position: absolute;
+    position: fixed;
     margin-right: 100px;
+}
+
+@media screen and (max-width: 1025px) {
+    .header_top_right_button {
+        top: 40px;
+        right: 30px;
+        margin-right: 0px;
+    }
 }
 
 .login_button {
@@ -136,12 +147,65 @@ body {
     border: none;
     background-color: unset;
     cursor: pointer;
+    z-index: 9998;
 }
 
-.HamburgerMenu {
-    
+@media screen and (min-width: 1025px) {
+    .menu_button {
+        display: none;
+    }
 }
 
+.fa-times {
+    display: block;
+    position: fixed;
+    left: 25px;
+    top: 35px;
+    cursor: pointer;
+    color: #ffffff;
+}
+
+.open_hide {
+display: none;
+}
+
+.close {
+    z-index: 9999;
+}
+
+.overlay {
+    position: fixed;
+    background: #1b202b;
+    height: 100%;
+    width: 80%;
+    z-index: 9997;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.overlay_show {
+    opacity: 1;
+    pointer-events: auto;
+}
+
+.overlay li {
+    padding: 3px;
+}
+
+.overlay a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-transform: uppercase;
+    font-size: 17px;
+    font-weight: 700;
+    color: #fff;
+    cursor: pointer;
+    padding-left: 20px;
+}
+
+.overlay_line {
+    margin-top: 80px;
+    opacity: 0.3;
+}
 
 /* ヘッダー下部の表示 */
 
@@ -615,7 +679,7 @@ li {
 }
 
 .latest_news_short_text {
-    font-family: Bluu Next,serif;
+    font-family: Bluu Next, serif;
     font-size: 48px;
     font-weight: 700;
     line-height: 1.35;
@@ -625,6 +689,7 @@ li {
 }
 
 /* 三つの写真を横並び */
+
 .latest_news_container {
     display: flex;
     flex-direction: row;
@@ -632,11 +697,13 @@ li {
 }
 
 /* 画像の上に文字を置きたい */
+
 .latest_news_pictures {
     position: relative;
 }
 
 /* 三つの写真のスタイル */
+
 .latest_news_pictures img {
     width: 360px;
     height: 200px;
@@ -685,15 +752,14 @@ li {
 }
 
 .latest_news_after_wrapper {
-   display: flex;
-   flex-direction: row;
-   align-items: flex-end;
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
 }
 
 .view_all_news_underline {
-  text-decoration: underline;
-  color: #f9f4f2;
-    
+    text-decoration: underline;
+    color: #f9f4f2;
 }
 
 /* フッターの背景 */
