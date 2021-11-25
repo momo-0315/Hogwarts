@@ -123,4 +123,6 @@ open.addEventListener("click", () => {
 close.addEventListener("click", () => {
     overlay.classList.remove('overlay_show');
     open.classList.remove('open_hide');
+    console.log('a');
 });
+
